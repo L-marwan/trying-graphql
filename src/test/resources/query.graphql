@@ -1,0 +1,11 @@
+query {
+    recentBooks(count: 1, offset: 0) {
+        id
+        name
+        pageCount
+        author {
+            id
+            firstName
+        }
+    }
+}

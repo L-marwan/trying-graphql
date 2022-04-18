@@ -1,0 +1,20 @@
+type Query {
+    recentBooks(count: Int, offset: Int): [Book]!
+}
+type Mutation {
+    writeBook(name: String!, count: String!, author: String!) : Book!
+}
+
+type Book{
+    id:ID!
+    name:String!
+    pageCount:Int!
+    author:Author!
+}
+
+type Author{
+    id:ID!
+    firstName:String!
+    lastName:String
+    books:[Book]!
+}
